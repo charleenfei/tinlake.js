@@ -34728,22 +34728,6 @@ var Tinlake = /** @class */ (function () {
                 }
             });
         }); };
-        this.dummyCall = function (param) { return __awaiter(_this, void 0, void 0, function () {
-            var test1, txHash;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        console.log("second dummy calling");
-                        test1 = src_29(param);
-                        console.log(test1);
-                        return [4 /*yield*/, executeAndRetry(this.contracts.nft.secondDummy, [param, this.ethConfig])];
-                    case 1:
-                        txHash = _a.sent();
-                        console.log("[NFT.mint] txHash: " + txHash);
-                        return [2 /*return*/, waitAndReturnEvents(this.eth, txHash, this.contracts['nft'].abi, this.transactionTimeout)];
-                }
-            });
-        }); };
         /**
          * @param owner Owner of the created loan
          */
